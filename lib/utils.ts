@@ -1,4 +1,4 @@
-export function minifyCss(css: string) {
+export function minifyCss(css: string): string {
     const regex  = /@font-face\s*\{([^]+?)\}/gi;
     const format = 'woff';
     let fontFace: RegExpExecArray | null;
@@ -50,7 +50,7 @@ export function minifyCss(css: string) {
     return outputCSS;
 }
 
-export function extractUrls(css: string) {
+export function extractUrls(css: string): Array<string> {
     const format = /url\(['"]?(.*?)['"]?\)/g;
     const matches: Array<string> = [];
     let match: RegExpExecArray | null;
