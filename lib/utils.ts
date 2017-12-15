@@ -61,4 +61,3 @@ export function extractUrls(css: string) {
 
     return matches;
 }
-
